@@ -11,6 +11,12 @@ const poppins = Poppins({
   display: "swap",
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   title: "Anuvada News - Balanced news coverage, powered by AI",
   description: "AI-powered news analysis, sentiment tracking, and political framing breakdown across global news sources.",

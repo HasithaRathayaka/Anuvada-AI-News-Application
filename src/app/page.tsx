@@ -13,7 +13,7 @@ export default async function Home(props: { searchParams?: Promise<{ q?: string;
   const articles = await getTopNewsArticles(searchParams);
 
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+    <div style={{ minHeight: "100dvh", display: "flex", flexDirection: "column" }}>
       <Header activeTab={tab} />
       <Suspense fallback={<div style={{ height: "40px", backgroundColor: "#EDEDE9" }} />}>
         <CategoryChips />

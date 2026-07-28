@@ -25,7 +25,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const relatedStories = await getRelatedArticles(id);
 
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+    <div style={{ minHeight: "100dvh", display: "flex", flexDirection: "column" }}>
       <Header />
 
       <main className="container" style={{ flexGrow: 1, paddingTop: "32px" }}>
@@ -107,7 +107,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             </div>
 
             {/* Article Prose Body Text */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px", fontSize: "16px", color: "#1F2937", lineHeight: "1.7", marginBottom: "48px" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "20px", fontSize: "16px", color: "#1F2937", lineHeight: "1.7", marginBottom: "48px", wordBreak: "break-word" }}>
               {article.raw_text.split('\n\n').filter(Boolean).map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}

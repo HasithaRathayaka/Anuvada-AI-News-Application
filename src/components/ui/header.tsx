@@ -8,8 +8,8 @@ export default function Header({ activeTab = "Home" }: { activeTab?: string }) {
 
       {/* Main Navigation Bar */}
       <div className="container header-container">
-        {/* Left: Menu Hamburger + Brand Logo */}
-        <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+        {/* Left: Menu Hamburger + Brand Logo + Nav */}
+        <div className="header-left-group">
           <button
             style={{
               background: "none",
@@ -30,7 +30,7 @@ export default function Header({ activeTab = "Home" }: { activeTab?: string }) {
           {/* anuvada News Logo */}
           <Link href="/" style={{ textDecoration: "none" }}>
             <div style={{ display: "flex", flexDirection: "column", lineHeight: "1" }}>
-              <span style={{ fontSize: "28px", fontWeight: "800", color: "#0D0D0F", letterSpacing: "-0.03em" }}>
+              <span className="header-logo-text">
                 anuvada
               </span>
               <span style={{ fontSize: "11px", fontWeight: "600", color: "#6B7280", textAlign: "right", marginTop: "-2px" }}>
@@ -57,7 +57,7 @@ export default function Header({ activeTab = "Home" }: { activeTab?: string }) {
         </div>
 
         {/* Right: Actions (Subscribe & Login) */}
-        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+        <div className="header-actions">
           <button className="btn-primary">Subscribe</button>
           <Show when="signed-out">
             <SignInButton mode="modal">

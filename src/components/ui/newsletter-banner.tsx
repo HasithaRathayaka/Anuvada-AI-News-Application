@@ -15,9 +15,8 @@ export default function NewsletterBanner() {
 
   return (
     <div
-      className="card-surface"
+      className="card-surface newsletter-card"
       style={{
-        padding: "32px 40px",
         marginTop: "48px",
         display: "flex",
         justifyContent: "space-between",
