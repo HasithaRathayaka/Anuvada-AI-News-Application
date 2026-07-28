@@ -7,16 +7,7 @@ export default function Header({ activeTab = "Home" }: { activeTab?: string }) {
 
 
       {/* Main Navigation Bar */}
-      <div
-        className="container"
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          paddingTop: "14px",
-          paddingBottom: "14px",
-        }}
-      >
+      <div className="container header-container">
         {/* Left: Menu Hamburger + Brand Logo */}
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
           <button
@@ -49,7 +40,7 @@ export default function Header({ activeTab = "Home" }: { activeTab?: string }) {
           </Link>
 
           {/* Nav Links */}
-          <nav style={{ display: "flex", gap: "24px", marginLeft: "16px", fontSize: "14px", fontWeight: "500" }}>
+          <nav className="header-nav">
             <Link href="/" style={{ color: activeTab === "Home" ? "#0D0D0F" : "#6B7280", borderBottom: activeTab === "Home" ? "2px solid #0D0D0F" : "none", paddingBottom: "4px" }}>
               Home
             </Link>

@@ -5,7 +5,7 @@ export default function Footer() {
     <footer style={{ backgroundColor: "#0D0D0F", color: "#ffffff", paddingTop: "48px", paddingBottom: "32px", marginTop: "64px" }}>
       <div className="container">
         {/* Main Footer Links */}
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "32px", paddingBottom: "40px", borderBottom: "1px solid #27272A" }}>
+        <div className="grid-footer">
           {/* Brand Column */}
           <div>
             <div style={{ display: "flex", flexDirection: "column", lineHeight: "1", marginBottom: "12px" }}>
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright Bottom Row */}
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "24px", fontSize: "12px", color: "#6B7280" }}>
+        <div className="flex-between" style={{ paddingTop: "24px", fontSize: "12px", color: "#6B7280" }}>
           <span>© 2026 Anuvada News. All rights reserved.</span>
           <span>Stay consistent. Stay unbiased.</span>
         </div>

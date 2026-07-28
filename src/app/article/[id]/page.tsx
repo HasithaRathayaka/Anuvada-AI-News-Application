@@ -30,7 +30,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
       <main className="container" style={{ flexGrow: 1, paddingTop: "32px" }}>
         {/* Main 2-Column Details Layout */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 340px", gap: "40px" }}>
+        <div className="grid-article-layout">
           {/* Left Main Article Column */}
           <div>
             {/* Category Breadcrumb */}
@@ -45,10 +45,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
             {/* Byline & Metadata Row */}
             <div
+              className="flex-between"
               style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
                 fontSize: "13px",
                 color: "#6B7280",
                 borderBottom: "1px solid #E5E7EB",
@@ -78,7 +76,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             </div>
 
             {/* Hero Main Image */}
-            <div style={{ position: "relative", width: "100%", height: "420px", borderRadius: "12px", overflow: "hidden", backgroundColor: "#E5E7EB" }}>
+            <div className="article-hero-img" style={{ position: "relative", width: "100%", height: "420px", borderRadius: "12px", overflow: "hidden", backgroundColor: "#E5E7EB" }}>
               <Image
                 src={article.image_url}
                 alt={article.title}
@@ -122,7 +120,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   Related Stories
                 </h2>
 
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
+                <div className="grid-related-stories">
                   {relatedStories.map((story) => (
                     <Link key={story.id} href={`/article/${story.id}`} style={{ textDecoration: "none" }}>
                       <div className="card-surface" style={{ display: "flex", gap: "16px", padding: "12px", alignItems: "center" }}>
